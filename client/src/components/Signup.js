@@ -53,7 +53,7 @@ export class Signup extends React.Component {
                                 <MDBInput controlId="email" label="Email" autoFocus type="email" value={this.state.email} onChange={this.handleChange} outline />
                                 <MDBInput controlId="password" label="Mot de passe" type="password" value={this.state.password} onChange={this.handleChange} outline />
                                 <MDBInput controlId="cpassword" label="Confirmer le mot d passe" type="password" value={this.state.cpassword} onChange={this.handleChange} outline />
-                                <MDBBtn color="" onClick={this.send}>Connexion</MDBBtn>
+                                <MDBBtn color="primary" outline  onClick={this.send}>Connexion</MDBBtn>
                             </MDBCardBody>
                         </MDBCard>
                     </MDBCol>
