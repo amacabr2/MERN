@@ -9,8 +9,8 @@ export class Login extends React.Component {
             email : "",
             password: ""
         }
-        this.handleChange.bind(this);
-        this.send.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.send = this.send.bind(this);
     }
 
     send(event) {

@@ -3,9 +3,6 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require('body-parser');
 
-//On définit notre objet express nommé app
-const app = express();
-
 //Connexion à la base de donnée
 mongoose.connect('mongodb://localhost/db').then(() => {
     console.log('Connected to mongoDB')
@@ -14,11 +11,16 @@ mongoose.connect('mongodb://localhost/db').then(() => {
     console.log(e);
 });
 
+
+//On définit notre objet express nommé app
+const app = express();
+
 //Body Parser
 let urlencodedParser = bodyParser.urlencoded({
     extended: true
 });
 app.use(urlencodedParser);
+
 app.use(bodyParser.json());
 
 //Définition des CORS

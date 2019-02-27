@@ -10,8 +10,8 @@ export class Signup extends React.Component {
             password: "",
             cpassword: ""
         }
-        this.handleChange.bind(this);
-        this.send.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.send = this.send.bind(this);
     }
 
     send(event) {
@@ -39,7 +39,7 @@ export class Signup extends React.Component {
 
     handleChange(event) {
         this.setState({
-            [event.target.id]: event.target.value
+            [event.target.name]: event.target.value
         });
     }
 
@@ -50,9 +50,9 @@ export class Signup extends React.Component {
                     <MDBCol>
                         <MDBCard>
                             <MDBCardBody>
-                                <MDBInput controlId="email" label="Email" autoFocus type="email" value={this.state.email} onChange={this.handleChange} outline />
-                                <MDBInput controlId="password" label="Mot de passe" type="password" value={this.state.password} onChange={this.handleChange} outline />
-                                <MDBInput controlId="cpassword" label="Confirmer le mot d passe" type="password" value={this.state.cpassword} onChange={this.handleChange} outline />
+                                <MDBInput name="email" label="Email" autoFocus type="email" value={this.state.email} onChange={this.handleChange} outline />
+                                <MDBInput name="password" label="Mot de passe" type="password" value={this.state.password} onChange={this.handleChange} outline />
+                                <MDBInput name="cpassword" label="Confirmer le mot de passe" type="password" value={this.state.cpassword} onChange={this.handleChange} outline />
                                 <MDBBtn color="primary" outline  onClick={this.send}>Connexion</MDBBtn>
                             </MDBCardBody>
                         </MDBCard>
